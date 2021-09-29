@@ -1,0 +1,71 @@
+1. Ask user to enter five names
+
+   convert third character in a name to uppercase
+
+import java.util.*;
+public class Convert3rdCharStringToupper
+{
+	public static void convertString()
+	{
+		String[] Array = new String[5];
+		Scanner sc = new Scanner(System.in);
+		int count=1;
+		for(int i=0;i<5;i++) 
+		{
+			System.out.println("Enter the "+count+" Name:");
+			Array[i] = sc.next();
+			count++;
+		}
+		System.out.println("Converted String");
+		for(String Array1:Array) 
+		{
+			String str = Array1;
+	        char ch = str.charAt(2);
+	        String Temp = Character.toString(ch).toUpperCase();
+	        System.out.println("Name : "+str.substring(0, 2)+Temp+str.substring(3));
+	        str = null;
+		}
+		
+	}
+
+	public static void main(String[] args)
+	{
+		
+	        convertString();
+	}
+
+}
+2.
+
+public class Decending
+{
+
+	public static void main(String[] args)
+	{
+	//Code to perform Decending order
+		int [] Array = new int[] {8,2,3,1,6,5,7};
+		int temp =0;
+		
+	    for(int i=0;i<Array.length-1;i++) 
+	  {
+		    for(int j=i+1;j<Array.length;j++) 
+		    {
+		    	if(Array[i]>Array[j])
+		    	{
+		    		temp = Array[i];
+		    		Array[i]= Array[j];
+		    		Array[j]= temp;
+		    	}
+		    }
+	  }
+	 
+	   //Code to print Array Of Decending Order
+		 for(int j=0;j<Array.length;j++) 
+		 {
+			 System.out.println(Array[j]);
+		 }
+		
+
+	}
+
+	}
